@@ -7,6 +7,7 @@
  <!-- <script src="./three.js"></script> -->
  <!-- three.jsを読み込む(CDN) -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js"></script>
+ <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
  <script>
@@ -31,6 +32,10 @@
    var box = new THREE.Mesh(geometry, material);
    box.position.z = -5;
    scene.add(box);
+
+   const axisHelper = new THREE.AxisHelper(2); //軸の長さ X：赤、Y：緑、z：青
+   scene.add(axisHelper);
+   
    //描画処理
    var update = function() {
     requestAnimationFrame(update);
