@@ -109,18 +109,24 @@
         var material_beard = new THREE.MeshLambertMaterial( {color: 0x000000} );
         var beard1 = new THREE.Mesh( beard_g, material_beard );
         var beard2 = new THREE.Mesh( beard_g, material_beard );
+        var beard3 = new THREE.Mesh( beard_g, material_beard );
         beard1.rotation.z = 1.7;
         beard1.position.set( 0.6, 1.1, 0.9);
         beard2.rotation.z = 1.57;
         beard2.position.set( 0.6, 0.9, 0.9);
+        beard3.rotation.z = 1.44;
+        beard3.position.set( 0.6, 0.7, 0.9);
 
         //　左ひげ1,2,3を作成
         var beard4 = new THREE.Mesh( beard_g, material_beard );
         var beard5 = new THREE.Mesh( beard_g, material_beard );
+        var beard6 = new THREE.Mesh( beard_g, material_beard );
         beard4.rotation.z = -1.7;
         beard4.position.set( -0.6, 1.1, 0.9);
-        beard2.rotation.z = -1.57;
-        beard2.position.set( -0.6, 0.9, 0.9);
+        beard5.rotation.z = -1.57;
+        beard5.position.set( -0.6, 0.9, 0.9);
+        beard6.rotation.z = -1.44;
+        beard6.position.set( -0.6, 0.7, 0.9);
 
         //　猫のオブジェクト
         const cat = new THREE.Group();
@@ -133,8 +139,10 @@
         cat.add(mouth);//　口を追加
         cat.add(beard1);//　右ひげ1を追加
         cat.add(beard2);//　右ひげ2を追加
+        cat.add(beard3);//　右ひげ3を追加
         cat.add(beard4);//　左ひげ1を追加
         cat.add(beard5);//　左ひげ2を追加
+        cat.add(beard6);//　左ひげ3を追加
         scene.add(cat);
 
         //　全体のオブジェクト
