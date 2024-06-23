@@ -112,7 +112,9 @@
         beard1.position.set( 0.6, 1.1, 0.9);
 
         //　左ひげ1,2,3を作成
-        
+        var beard4 = new THREE.Mesh( beard_g, material_beard );
+        beard4.rotation.z = -1.7;
+        beard4.position.set( -0.6, 1.1, 0.9);
 
         //　猫のオブジェクト
         const cat = new THREE.Group();
@@ -124,6 +126,7 @@
         cat.add(nose);//　鼻を追加
         cat.add(mouth);//　口を追加
         cat.add(beard1);//　右ひげ1を追加
+        cat.add(beard4);//　左ひげ1を追加
         scene.add(cat);
 
         //　全体のオブジェクト
