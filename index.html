@@ -102,7 +102,11 @@
         nose.position.set(0,1,0.9);
 
         //口を作成
-
+        var mouth_g = new THREE.CylinderGeometry( 0.3, 0.5, 1, 8 );
+        var material_mouth = new THREE.MeshLambertMaterial( {color: 0xF067A6} );
+        var mouth = new THREE.Mesh( mouth_g, material_mouth );
+        mouth.rotation.x = 1.57;
+        mouth.position.set( 0, 0.5, 0.7 );
 
         //右ひげを作成
 
