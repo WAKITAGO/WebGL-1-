@@ -96,7 +96,10 @@
         l_eye.position.set(0.3,1.3,0.8);
 
         //鼻を作成
-
+        var nose_g = new THREE.SphereGeometry( 0.1, 32, 32 );
+        var material_nose = new THREE.MeshLambertMaterial({ color: 0x000000 });
+        var nose = new THREE.Mesh( eye_g, material_nose);
+        nose.position.set(0,1,1);
 
         //口を作成
 
@@ -163,11 +166,12 @@
 
         //猫のオブジェクト
         const cat = new THREE.Group();
-        cat.add(head); // 頭を追加
+        cat.add(head);//頭を追加
         cat.add(r_ear);//右耳を追加
         cat.add(l_ear);//左耳を追加
         cat.add(r_eye);//右目を追加
         cat.add(l_eye);//左目を追加
+        cat.add(nose);//鼻を追加
         //pengin.add(body); //体を追加
         //pengin.add(lleg); //左足を追加
         //pengin.add(rleg); //右足を追加
