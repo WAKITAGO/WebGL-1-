@@ -86,10 +86,14 @@
         l_ear.position.set(0.7,1.9,0);
 
         //右目を作成
-
+        var eye_g = new THREE.SphereGeometry( 0.2, 32, 32 );
+        var material_eye = new THREE.MeshLambertMaterial({ color: 0x000000 });
+        var r_eye = new THREE.Mesh( eye_g, material_eye);
+        r_eye.position.set(-1,1,1);
 
         //左目を作成
-
+        var l_eye = new THREE.Mesh( eye_g, material_eye);
+        l_eye.position.set(1,1,1);
 
         //鼻を作成
 
