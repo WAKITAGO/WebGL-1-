@@ -126,9 +126,9 @@
         //var r_eye = new THREE.Mesh( eye_g, material_eye);
         //r_eye.position.set(-0.2,1.3,0.35);
 
-        //ペンギンのオブジェクト
-        //const pengin = new THREE.Group();
-        //pengin.add(head); // 頭を追加
+        //猫のオブジェクト
+        const cat = new THREE.Group();
+        cat.add(head); // 頭を追加
         //pengin.add(body); //体を追加
         //pengin.add(lleg); //左足を追加
         //pengin.add(rleg); //右足を追加
@@ -137,15 +137,15 @@
         //pengin.add(beak); //くちばし
         //pengin.add(l_eye); //左目
         //pengin.add(r_eye); //右目
-        //pengin.position.set(0,1,0);//ペンギングループの原点の位置
-        //scene.add(pengin);
+        cat.position.set(0,1,0);//猫グループの原点の位置
+        scene.add(cat);
 
         //全体のオブジェクト
-        //const all = new THREE.Group();
-        //all.add(plane);//平面を追加
-        //all.add(pengin); // ペンギンを追加
-        //all.position.set(0,0,0);//全体グループの原点の位置
-        //scene.add(all); 
+        const all = new THREE.Group();
+        all.add(plane);//平面を追加
+        all.add(cat); // 猫を追加
+        all.position.set(0,0,0);//全体グループの原点の位置
+        scene.add(all); 
 
         update();
 
@@ -156,12 +156,12 @@
           requestAnimationFrame(update);
 
 
-          // ペンギンを回転させる
-          //pengin.rotation.y += 0.005;;
+          // 猫を回転させる
+          cat.rotation.y += 0.005;;
 
           // 全体を回転させる
-          //all.rotation.x += 0.01;
-          //all.rotation.y += 0.005;;
+          all.rotation.x += 0.01;
+          all.rotation.y += 0.005;;
         }
       }
     </script>
