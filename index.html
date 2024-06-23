@@ -69,15 +69,15 @@
         // 頭を作成
         var head_g = new THREE.SphereGeometry( 1, 32, 32 );
         //var material_head = new THREE.MeshLambertMaterial({ color: 0x0000ff });
-        var head = new THREE.Mesh(head_g, material_head);
+        var head = new THREE.Mesh(head_g, material);
         head.position.set(0,1,0);//allの中心が原点になる
 
         //右耳を作成
         var ear_g = new THREE.ConeGeometry( 0.3, 0.5, 32 );
         //var material_ear = new THREE.MeshLambertMaterial({ color: 0x0000ff });
-        var r_ear = new THREE.Mesh(ear_g, material_ear);
+        var r_ear = new THREE.Mesh(ear_g, material);
+        r_ear.rotation.y = 0.7;
         r_ear.position.set(0,0.7,0);
-        r_ear.scale.y = 0.7;
 
         //左耳を作成
 
